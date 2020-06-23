@@ -1,0 +1,45 @@
+/*Si la pantalla tiene hasta 900px*/
+@media (max-width:900px){
+    /*Entonces blogs se presentara así*/
+    .blogs-news{ /*tendra una grilla de 1 columna y 3 filas*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    }
+    /*Entonces la imagen ocupara la segunda fila*/
+    .blogs-news-img-container{
+        grid-row: 2;
+    }
+    /*Entonces la info ocupara la tercera fila de la unica columna */
+    .blogs-news-info-container{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    /*Entonces los posts ocuparan casi la mitad de la pantalla*/
+    .blogs-posts-container .post-container{
+        max-width: 45%;
+    }
+    /*Entonces perfil se presentará así*/
+    /*La grilla de la 1ra seccion se convertira en un bloque*/
+    .perfil-main-container .perfil-container{
+        display: block;
+    }
+    /*El contenedor de los proyectos se convertira en una grilla*/
+    /*de dos columnas y 2 filas*/
+    .proyects-main-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+    }
+}
+/*Si la pantalla tiene hasta 600px*/
+@media (max-width:600px){
+    /*Entonces el contenedor de cada post ocupara todo el espacio de la*/
+    /*pantalla*/
+    .blogs-posts-container .post-container{
+        max-width: 95%;
+    }
+    /*Entonces el contenedor de proyectos tendrá una sola columna*/
+    /*así cada proyecto ocupara toda la fila*/
+    .proyects-main-container{
+        grid-template-columns: 1fr;
+    }
+}
